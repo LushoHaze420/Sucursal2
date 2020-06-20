@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SistemaSucursal.Dato
+namespace SistemaSucursal.Dato()
 {
     using System;
     using System.Collections.Generic;
