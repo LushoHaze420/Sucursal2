@@ -1,0 +1,113 @@
+﻿<Window x:Class="SistemaSucursal.Presentacion.Administrador"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SistemaSucursal.Presentacion"
+        mc:Ignorable="d"
+        Title="Administrador" Height="500" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="71*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Fill="White" HorizontalAlignment="Left" Height="469" Stroke="White" VerticalAlignment="Top" Width="141" Grid.ColumnSpan="8"/>
+        <Rectangle Grid.Column="1" Fill="#FF343442" HorizontalAlignment="Left" Height="468" Margin="611,1,0,0" Stroke="Black" VerticalAlignment="Top" Width="100"/>
+        <TabControl HorizontalAlignment="Left" Height="469" VerticalAlignment="Top" Width="792" TabStripPlacement="Left" Background="#FFF1F1F1" SelectionChanged="TabControl_SelectionChanged" BorderBrush="#FFF1F1F1" Grid.ColumnSpan="8">
+            <TabItem Header="VENDEDOR" Margin="2,77,1,-87" Foreground="Black" BorderBrush="{x:Null}" Background="White" FontWeight="Bold">
+                <Grid Background="#FFF1F1F1" Margin="35,0,0,-7">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="33*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image HorizontalAlignment="Left" Height="594" Margin="10,-134,-593,0" VerticalAlignment="Top" Width="1255" Source="F3.png" Opacity="0.2" Grid.ColumnSpan="2"/>
+                    <Label Content="NOMBRE" HorizontalAlignment="Left" Margin="40,50,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Foreground="Black"/>
+                    <Label Content="RUT" Grid.Column="1" HorizontalAlignment="Left" Margin="132,50,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.391,0.635" Foreground="Black"/>
+                    <Label Content="SEXO" Grid.Column="1" HorizontalAlignment="Left" Margin="309,50,0,0" VerticalAlignment="Top" Foreground="Black"/>
+                    <ComboBox x:Name="combosucu" Grid.Column="1" HorizontalAlignment="Left" Margin="469,76,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="SUCURSAL" Grid.Column="1" HorizontalAlignment="Left" Margin="469,50,0,0" VerticalAlignment="Top" Foreground="Black"/>
+                    <TextBox x:Name="txtnomvendedor" HorizontalAlignment="Left" Height="23" Margin="40,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="txtrutvendedor" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="132,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="txtsexovendedor" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="309,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <DataGrid x:Name="listaview" HorizontalAlignment="Left" Height="313" Margin="42,109,0,0" VerticalAlignment="Top" Width="467" Grid.ColumnSpan="2" Background="#FFC7D3CF"/>
+                    <Button x:Name="btnagregravendedor" Content="AGREGAR" Grid.Column="1" HorizontalAlignment="Left" Margin="487,130,0,0" VerticalAlignment="Top" Width="75" Background="#FF6CCB9C" BorderBrush="#FF6CCB9C" Foreground="White" Click="btnagregravendedor_Click"/>
+                    <Button x:Name="btneliminarvendedor" Content="ELIMINAR" Grid.Column="1" HorizontalAlignment="Left" Margin="487,422,0,0" VerticalAlignment="Top" Width="75" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                    <Button x:Name="btnrefrescarvendedor" Content="REFRESCAR" HorizontalAlignment="Left" Margin="40,422,0,0" VerticalAlignment="Top" Width="75" Background="{x:Null}" BorderBrush="{x:Null}" Grid.ColumnSpan="2" Click="btnrefrescarvendedor_Click"/>
+                    <Button x:Name="btnsalirvendedor" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="574,10,0,0" VerticalAlignment="Top" Width="15" Click="btnsalirvendedor_Click" BorderBrush="{x:Null}" Height="15" RenderTransformOrigin="0.667,-0.133">
+                        <Button.Background>
+                            <ImageBrush ImageSource="SALIR_IMG-removebg-preview.png"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="btnactualizarvendedor" Content="Actualizar" Grid.Column="1" HorizontalAlignment="Left" Margin="487,189,0,0" VerticalAlignment="Top" Width="75" Click="btnactualizar1_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="SUCURSAL" Margin="5,233,3,-244" Foreground="Black" Background="White" BorderBrush="{x:Null}" FontWeight="Bold">
+                <Grid Background="#FFF1F1F1" Margin="-1,0,1,0">
+                    <Image HorizontalAlignment="Left" Height="908" Margin="0,0,0,-445" VerticalAlignment="Top" Width="707" Source="F2.png" Opacity="0.2"/>
+                    <Label Content="NOMBRE SUCURSAL" HorizontalAlignment="Left" Margin="444,46,0,0" VerticalAlignment="Top"/>
+                    <Label Content="CIUDAD" HorizontalAlignment="Left" Margin="36,46,0,0" VerticalAlignment="Top" Foreground="Black" FontWeight="Bold"/>
+                    <TextBox x:Name="txtciudad" HorizontalAlignment="Left" Height="23" Margin="36,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="txtsucursal" HorizontalAlignment="Left" Height="23" Margin="444,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <DataGrid HorizontalAlignment="Left" Height="311" Margin="36,110,0,0" VerticalAlignment="Top" Width="528" Background="#FFC7D3CF"/>
+                    <Button x:Name="btnagregarsucu" Content="AGREGAR" HorizontalAlignment="Left" Margin="489,426,0,0" VerticalAlignment="Top" Width="75" Background="#FF6CCB9C" BorderBrush="#FF6CCB9C" Foreground="White" Click="btnagregarsucu_Click"/>
+                    <Button x:Name="btnactualizarsucu" Content="REFRESCAR" HorizontalAlignment="Left" Margin="36,426,0,0" VerticalAlignment="Top" Width="75" BorderBrush="{x:Null}" Background="{x:Null}" Click="btnactualizarsucu_Click"/>
+                    <Button x:Name="btnsalirsucu" Content="" HorizontalAlignment="Left" Margin="682,10,0,0" VerticalAlignment="Top" Width="15" Click="btnsalirsucu_Click" BorderBrush="{x:Null}" IsCancel="True" Foreground="Black" Height="15" RenderTransformOrigin="0.2,3.933">
+                        <Button.Background>
+                            <ImageBrush ImageSource="salir3.png"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </TabItem>
+            <TabItem Header="ADMIN" HorizontalAlignment="Left" Height="33" VerticalAlignment="Bottom" Width="71" Margin="-3,0,0,-80" Background="White" Foreground="Black" BorderBrush="{x:Null}" FontWeight="Bold">
+                <Grid Background="#FFF1F1F1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="11*"/>
+                        <ColumnDefinition Width="377*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image HorizontalAlignment="Left" Height="908" Margin="14,0,0,-445" VerticalAlignment="Top" Width="693" Source="F2.png" Opacity="0.2" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                    <Label Content="NOMBRE" Grid.Column="1" HorizontalAlignment="Left" Margin="0,41,0,0" VerticalAlignment="Top" Foreground="Black" FontWeight="Bold"/>
+                    <Label Content="SEXO" Grid.Column="1" HorizontalAlignment="Left" Margin="336,41,0,0" VerticalAlignment="Top" Foreground="Black" FontWeight="Bold"/>
+                    <Label Content="RUT:" Grid.Column="1" HorizontalAlignment="Left" Margin="181,41,0,0" VerticalAlignment="Top" Foreground="Black" FontWeight="Bold"/>
+                    <TextBox x:Name="txtnomadmin" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="0,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="txtrutadmin" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="181,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="txtsexoadmin" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="336,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <ComboBox x:Name="combosucu1" Grid.Column="1" HorizontalAlignment="Left" Margin="522,73,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="SUCURSAL" Grid.Column="1" HorizontalAlignment="Left" Margin="522,47,0,0" VerticalAlignment="Top" Foreground="#FF080707" FontWeight="Bold"/>
+                    <DataGrid Grid.Column="1" HorizontalAlignment="Left" Height="327" Margin="2,99,0,0" VerticalAlignment="Top" Width="502" Background="#FFC7D3CF" Grid.RowSpan="2"/>
+                    <Button x:Name="btnagregaradmin" Content="AGREGAR" Grid.Column="1" HorizontalAlignment="Left" Margin="544,41,0,0" VerticalAlignment="Top" Width="76" Background="#FF6CCB9C" BorderBrush="#FF6CCB9C" Foreground="White" Grid.Row="1" RenderTransformOrigin="2.487,-3.9" Click="btnagregaradmin_Click"/>
+                    <Button x:Name="btneliminaradmin" Content="ELIMINAR" Grid.Column="1" HorizontalAlignment="Left" Margin="544,331,0,0" VerticalAlignment="Top" Width="76" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Row="1"/>
+                    <Button x:Name="btnsaliradmin" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="662,10,0,0" VerticalAlignment="Top" Width="15" Click="btnsaliradmin_Click" BorderBrush="#FF6CCB9C" Foreground="White" Height="15">
+                        <Button.Background>
+                            <ImageBrush ImageSource="salir2.png"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="btnrefrescar" Content="REFRESCAR" Grid.Column="1" HorizontalAlignment="Left" Margin="10,331,0,0" VerticalAlignment="Top" Width="75" BorderBrush="{x:Null}" Background="{x:Null}" Grid.Row="1"/>
+                    <Button x:Name="btnactualizaradmin" Content="Actualizar" Grid.Column="1" HorizontalAlignment="Left" Margin="545,110,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="CLAVE" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="73" Margin="-6,228,0,-228" BorderBrush="{x:Null}" Foreground="Black" Background="White" FontWeight="Bold">
+                <Grid>
+                    <Image HorizontalAlignment="Left" Height="496" Margin="76,-20,-51,-13" VerticalAlignment="Top" Width="682" Source="imageonline-co-transparentimage.png" Opacity="0.2"/>
+                    <Image HorizontalAlignment="Left" Height="567" Margin="0,89,0,-193" VerticalAlignment="Top" Width="570" Source="P3 - copia.png" Opacity="0.2"/>
+                    <Label Content="RUT:" HorizontalAlignment="Left" Margin="302,124,0,0" VerticalAlignment="Top" Foreground="Black" Background="{x:Null}"/>
+                    <Label Content="CLAVE" HorizontalAlignment="Left" Margin="302,261,0,0" VerticalAlignment="Top" Foreground="Black"/>
+                    <Label Content="TIPO USUARIO" HorizontalAlignment="Left" Margin="302,192,0,0" VerticalAlignment="Top" Foreground="Black"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="302,218,0,0" VerticalAlignment="Top" Width="120"/>
+                    <TextBox HorizontalAlignment="Left" Height="22" Margin="302,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="302,292,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Button x:Name="btnagregarclave" Content="AGREGAR" HorizontalAlignment="Left" Margin="255,368,0,0" VerticalAlignment="Top" Width="76" Background="#FF6CCB9C" BorderBrush="#FF6CCB9C" Foreground="White"/>
+                    <Button x:Name="btnsalirclave" Content="SALIR" HorizontalAlignment="Left" Margin="389,368,0,0" VerticalAlignment="Top" Width="76" Click="btnsalirclave_Click" BorderBrush="{x:Null}" Background="{x:Null}"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <DockPanel HorizontalAlignment="Left" Height="31" LastChildFill="False" Margin="0,255,0,0" VerticalAlignment="Top" Width="8" Background="#FF6CCB9C"/>
+        <DockPanel HorizontalAlignment="Right" Height="34" LastChildFill="False" Margin="0,167,3,0" VerticalAlignment="Top" Width="8" Background="#FF6CCB9C"/>
+        <DockPanel HorizontalAlignment="Left" Height="31" LastChildFill="False" Margin="0,351,0,0" VerticalAlignment="Top" Width="8" Background="#FF6CCB9C"/>
+        <DockPanel HorizontalAlignment="Left" Height="31" LastChildFill="False" Margin="0,78,0,0" VerticalAlignment="Top" Width="8" Background="#FF6CCB9C"/>
+        <Image HorizontalAlignment="Left" Height="92" Margin="-1,-19,0,0" VerticalAlignment="Top" Width="81" Source="logo_scrum.png" Grid.ColumnSpan="8"/>
+    </Grid>
+</Window>

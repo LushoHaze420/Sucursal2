@@ -1,0 +1,16 @@
+﻿<Window x:Class="SistemaSucursal.Presentacion.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SistemaSucursal.Presentacion"
+        mc:Ignorable="d"
+        Title="Menu" Height="499.8" Width="800">
+    <Grid Background="#FFF1F1F1">
+        <Button x:Name="btnboleta" Content="BOLETA" HorizontalAlignment="Left" Margin="196,148,0,0" VerticalAlignment="Top" Width="162" Height="155" Click="btnboleta_Click" FontWeight="Bold" Background="#FF6CCB9C" Foreground="White" BorderBrush="#FF6CCB9C"/>
+        <Button x:Name="btnfactura" Content="FACTURA" HorizontalAlignment="Left" Margin="431,148,0,0" VerticalAlignment="Top" Width="161" Height="155" Click="btnfactura_Click" FontWeight="Bold" BorderBrush="#FF6CCB9C" Background="#FF6CCB9C" Foreground="White"/>
+        <Button x:Name="btnsalirmenu" Content="SALIR" HorizontalAlignment="Left" Margin="356,363,0,0" VerticalAlignment="Top" Width="76" Click="btnsalirmenu_Click" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" FontWeight="Bold"/>
+        <Label Content="BIENVENIDO/A VENDEDOR/A" HorizontalAlignment="Left" Margin="240,34,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="22" FontFamily="Segoe UI Semibold"/>
+
+    </Grid>
+</Window>

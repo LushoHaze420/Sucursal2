@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c727839629e64d65ac58638fb4e8784f" Name="Diagram1">
+        <EntityTypeShape EntityType="Grupo03Model.ADMINISTRADOR" Width="1.5" PointX="0.5" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Grupo03Model.BOLETA" Width="1.5" PointX="7.375" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Grupo03Model.EMPRESA" Width="1.5" PointX="5.875" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Grupo03Model.FACTURA" Width="1.5" PointX="6.5" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Grupo03Model.SUCURSAL" Width="1.5" PointX="2.5" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Grupo03Model.USUARIO" Width="1.5" PointX="2.625" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Grupo03Model.VENDEDOR" Width="1.5" PointX="4.75" PointY="4" IsExpanded="true" />
+        <AssociationConnector Association="Grupo03Model.FK__ADMINISTR__id_su__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="Grupo03Model.FK__BOLETA__rut_vend__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="Grupo03Model.FK__FACTURA__rut_emp__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="Grupo03Model.FK__FACTURA__rut_ven__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="Grupo03Model.FK__VENDEDOR__id_suc__25869641" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
